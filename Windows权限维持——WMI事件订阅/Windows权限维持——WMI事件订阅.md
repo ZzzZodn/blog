@@ -6,7 +6,7 @@
 
 fireeye的图显示了wmi的工作结构
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持——WMI事件订阅/media/截屏2020-01-28下午4.17.17.png)
+![](./media/截屏2020-01-28下午4.17.17.png)
 
 ### 常用的wmi功能
 
@@ -31,7 +31,7 @@ wmic /node:192.168.17.138 /user:test /password:!@#123QWE process call create "cm
 
 wmi提供了WQL来查询类和命名空间。下图是以powershell提供的接口查询进程信息
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持——WMI事件订阅/media/截屏2020-01-28下午4.31.41.png)
+![](./media/截屏2020-01-28下午4.31.41.png)
 
 WQL类似于数据库查询语句，wmi中的类，可以理解为数据库中的表，常见的类如下
 
@@ -62,7 +62,7 @@ Win32_Service	系统服务
 
 可以使用系统自带的WQL测试器测试WQL语句
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持——WMI事件订阅/media/wbemtest.jpg)
+![](./media/wbemtest.jpg)
 
 WMI命名空间用于对相同环境中存在的类进行分组，也用于加强安全限制。当请求连接到一个命名空间时会检查用户的权限，这决定命名空间级别的权限。命名空间是一个层次结构，类似文件系统中文件夹的层次结构。常见的命名空间：
 
@@ -96,11 +96,11 @@ WQL可以分为三种查询方式：
 
 - Schema: 获取类定义，使用的基本语法的形式与其他类型的查询一样
 
-  ![](/Users/cate4cafe/工作/文章/Windows权限维持——WMI事件订阅/media/schema.jpg)
+  ![](./media/schema.jpg)
 
 - DATA: 用于获取类实例,它返回特定类的所有实例，包括各自的请求属性集
 
-  ![](/Users/cate4cafe/工作/文章/Windows权限维持——WMI事件订阅/media/data.jpg)
+  ![](./media/data.jpg)
 
 - Event:用于过滤出一个特定事件通知的属性,通常用来在一个WMI对象实例创建/修改/删除的时候给用户发送一个消息。事件表征被管理环境的变更。每个查询允许添加一些附加的操作符，如：
   WITHIN：指定轮询
@@ -144,7 +144,7 @@ WQL可以分为三种查询方式：
 
 当打开一个notepad进程时，将会打开一个calc
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持——WMI事件订阅/media/截屏2020-01-28下午8.11.24.png)
+![](./media/截屏2020-01-28下午8.11.24.png)
 
 相关利用脚本[WMIBackdoor](https://github.com/mattifestation/WMI_Backdoor/blob/master/WMIBackdoor.ps1)、[Persistence](https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Persistence/Persistence.psm1)
 

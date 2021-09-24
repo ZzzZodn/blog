@@ -4,7 +4,7 @@
 
 在多次的攻防演练中，都遇到了DMZ区网段和数据库网段隔离，从DMZ区只能通过数据库端口访问到数据库段的数据库服务器的环境
 
-![](/Users/cate4cafe/工作/文章/利用MSSQL作为CS C2通道/网络隔离.jpg)
+![](./media/网络隔离.jpg)
 
 这种条件下，想要突破隔离，可以使用套接字复用技术，复用web服务器与数据库服务器端口链接的套接字，利用该套接字传输流量，比如mssql下的mssqlproxy便是利用了该技术。但是在windows下，套接字复用受到API限制，对多线程链接处理不好，导致实战中限制过多，只能单线程执行命令，扫描与RDP无法使用。还能如何利用数据库作为一条通道，使我们能够稳定、多链路的传输流量呢？
 
@@ -12,7 +12,7 @@
 
 CS的扩展C2可以让我们自定义流量协议、传输过程来实现被控制端和teamserver的通信，参考[Cobalt Strike 的 ExternalC2](https://rcoil.me/2019/10/%E3%80%90%E6%B8%97%E9%80%8F%E6%8A%80%E5%B7%A7%E3%80%91Cobalt%20Strike%20%E7%9A%84%20ExternalC2/)。鉴于数据库快速稳定的读写和高性能的I/O功能，我们便可以利用数据库表来作为CS的C2通道介质。当teamserver下发命令时，第三方控制端将命令insert到数据库供第三方客户端select出来。第三方select出命令之后，将其写入到命名管道由beacon读取并执行。命令结果以相同方法传回到teamserver，这样就完成了teamserver与beacon间的通信，能通过数据库端口上线数据库服务器，突破网络隔离。上线流程如下：
 
-![](/Users/cate4cafe/工作/文章/利用MSSQL作为CS C2通道/mssql代理实现.jpg)
+![](./media/mssql代理实现.jpg)
 
 
 

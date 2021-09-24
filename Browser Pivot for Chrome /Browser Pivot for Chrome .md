@@ -49,11 +49,11 @@
 
   在mstsc上另存为rdp文件
 
-  ![](media/20191224-1.png)
+  ![](./media/20191224-1.png)
 
   编辑得到的rdp文件，在末尾添加配置
 
-  ![](media/20191224-3.png)
+  ![](./media/20191224-3.png)
 
   注意箭头处要和上面注册表项里的"Name"项一致
 
@@ -65,7 +65,7 @@
 
   在Explorer进到chrome.exe所在目录，打开cmd，命令`chrome.exe --user-data-dir="C:\\users\\public\documents\User Data" --disable-gpu` 我在虚拟机下需要用--disable-gpu禁用chrome硬件加速才能正常启动，不然chrome会黑框。物理机上没测试。
 
-  ![](media/20191224-4.png)
+  ![](./media/20191224-4.png)
 
   
 

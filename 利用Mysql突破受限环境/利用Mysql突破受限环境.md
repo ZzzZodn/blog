@@ -2,7 +2,7 @@
 
 #### 0x01 前言
 
-前面文章[《利用MSSQL突破受限环境》](http://greatagain.dbappsecurity.com.cn/#/book?id=6253&type_id=1)提到在只能访问到mssql数据库服务器1433端口的情况下，如何通过CLR使mssql作为socks5代理来突破此受限环境。此篇文章介绍如何利用mysql作为socks代理突破网络隔离，以备遇到相同环境下能突破隔离。
+前面文章《利用MSSQL突破受限环境》提到在只能访问到mssql数据库服务器1433端口的情况下，如何通过CLR使mssql作为socks5代理来突破此受限环境。此篇文章介绍如何利用mysql作为socks代理突破网络隔离，以备遇到相同环境下能突破隔离。
 
 #### 0x02 Mysql C API
 
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 gcc version.c -o version  `mysql_config --cflags --libs`
 ```
 
-![](/Users/cate4cafe/工作/文章/利用Mysql突破受限环境/media/1.jpg)
+![](./media/1.jpg)
 
 #### 0x03 代理
 

@@ -26,17 +26,17 @@ Microsoft在Windows 3.11中引入了组件对象模型（COM），作为一种�
 
 - 排除路径是否以HKLM开头
 
-  ![](/Users/cate4cafe/工作/文章/Windows权限维持--劫持COM对象/media/1.jpg)
+  ![](./media/1.jpg)
 
 打开文件或执行操作，将得到带有COM对象的注册表键，这些列表可以被劫持，将任意库加载到收信任进程。
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持--劫持COM对象/media/2.jpg)
+![](./media/2.jpg)
 
 此外，可以使用[Get-ScheduledTaskComHandler](https://github.com/enigma0x3/Misc-PowerShell-Stuff/blob/master/Get-ScheduledTaskComHandler.ps1)来发现所有用户登录时执行且容易受到COM劫持的计划任务
 
 `Get-ScheduledTaskComHandler -PersistenceLocations`
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持--劫持COM对象/media/3.jpg)
+![](./media/3.jpg)
 
 可以看到任务"**CacheTask** "在调用时使用“ *wininet.dll* ”并具有以下CLSID：{0358B920-0AC7-461F-98F4-58E32CD89148}。通过劫持该对象指向的DLL，便可以在计划任务启动时执行我们的代码。
 
@@ -48,19 +48,19 @@ Microsoft在Windows 3.11中引入了组件对象模型（COM），作为一种�
 
 下图展示**InprocServer32中**通常存在的注册表项。
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持--劫持COM对象/media/4.jpg)
+![](./media/4.jpg)
 
 在HKCU中修改上面发现的"**CacheTask** "计划任务对应COM对象的CLSID注册表项里的InProcServer32项指向任意DLL而不是“ *wininet.dll* ”，便可执行我们的dll。
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持--劫持COM对象/media/5.jpg)
+![](./media/5.jpg)
 
 - **LocalServer32**
 
   **LocalServer32** 指定32位本地服务器应用程序的完整路径。用任意可执行文件在磁盘上的位置替换应用程序的默认值将实现COM劫持。
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持--劫持COM对象/media/6.jpg)
+![](./media/6.jpg)
 
-![](/Users/cate4cafe/工作/文章/Windows权限维持--劫持COM对象/media/7.jpg)
+![](./media/7.jpg)
 
 需要激活对应ClassID
 

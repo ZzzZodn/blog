@@ -73,7 +73,7 @@ DLL劫持绕过UAC的原理是劫持高权限白名单程序启动是要加载�
 
 以C:\Windows\SysWOW64\SystemPropertiesAdvanced.exe为例，procemon查看启动时加载的DLL
 
-![](/Users/cate4cafe/工作/文章/Bypass UAC/media/advanced.jpg)
+![](./media/advanced.jpg)
 
 SystemPropertiesAdvanced会按照DLL加载的顺序去加载srrstr.dll，最终会在每个环境变量的路径去遍历
 
@@ -107,7 +107,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\ShellCompatibility\
 
 下图是MSF windows/local/bypassuac_comhijack插件通过COM组件劫持bypass UAC提权过程。
 
-![](/Users/cate4cafe/工作/文章/Bypass UAC/media/msf bypassUAC.jpg)
+![](./media/msf bypassUAC.jpg)
 
 windows/local/bypassuac_comhijack插件通过劫持eventvwr.exe、mmc.exe这两个自提权程序的COM加载过程来达到bypass UAC目的。在上文可以看到eventvwr启动过程中会查询加载HKCU\Software\Classes\CLSID\{0A29FF9E-7F9C-4437-8B11-F424491E3931}下的值，但是默认这个键是不存在系统中的，且普通用户权限对HKCU\Software\Classes\CLSID可写。所以在注册表中增加这个键，设置相应的值，就可以达到劫持COM组件调用的目的。下图是windows/local/bypassuac_comhijack插件写入的内容：
 
@@ -249,7 +249,7 @@ COM接口通常是一组以函数的逻辑集合，其命名一般以“I"为前
 
 检查令牌安全上下文，利用受限令牌创建进程。
 
-![](/Users/cate4cafe/工作/文章/Bypass UAC/media/wusa.jpg)
+![](./media/wusa.jpg)
 
 ### 
 

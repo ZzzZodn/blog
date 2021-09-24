@@ -12,7 +12,7 @@
 
 `upload reciclador.dll C:\windows\temp\reciclador.dll`
 
-![](/Users/cate4cafe/工作/文章/利用mssql突破受限环境/media/1.jpg)
+![](./media/1.jpg)
 
 查看代码，可知改工具是利用了sp_OACreate存储过程来写入文件
 
@@ -33,11 +33,11 @@
 
 - 安装CLR
 
-  ![](/Users/cate4cafe/工作/文章/利用mssql突破受限环境/media/2.jpg)
+  ![](./media/2.jpg)
 
 - 执行代理
 
-  ![](/Users/cate4cafe/工作/文章/利用mssql突破受限环境/media/3.jpg)
+  ![](./media/3.jpg)
 
   配置SOCKS5代理便可使用。实际利用中，如果不方便使用mssqlclient，可以照着脚本里的sql语句逐条执行。
 

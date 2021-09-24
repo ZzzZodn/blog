@@ -49,7 +49,7 @@
 
   使用netsess对每个域机器进行枚举，查找域管session
 
-  ![](media/netsess.png)
+  ![](./media/netsess.png)
 
   Domain Admin列表与活动会话列表交叉引用，以确定哪些IP地址上有活动的域令牌
 
@@ -162,7 +162,7 @@
 
 [Tokenvator](https://github.com/0xbadjuju/Tokenvator/tree/master/Tokenvator)是netspi开发的一套Token利用工具，[netspi](https://blog.netspi.com/)干货蛮多的，可以关注一下。
 
-<img src="/Users/cate4cafe/工作/文章/域管进程查找及窃取Token/media/20200115200437.jpg" style="zoom:50%;" />
+<img src="./media/20200115200437.jpg" style="zoom:50%;" />
 
 ##### incognito
 

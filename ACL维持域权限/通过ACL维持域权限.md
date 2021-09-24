@@ -14,7 +14,7 @@ ACL--访问控制列表。用来表示用户（组）权限的列表，包括DAC
 
   System Access Control List，定义对象的访问行为记录策略。
 
-![](/Users/cate4cafe/工作/文章/ACL维持域权限/20200413102324.jpg)
+![](./media/20200413102324.jpg)
 
 在拥有ACL配置权限的条件下，配置ACL使的普通用户权限也能像高权限一样访问、修改某些对象，从而达到隐蔽维持权限的方法
 
@@ -26,13 +26,13 @@ system权限执行
 
 `Add-RemoteRegBackdoor -ComputerName Ad.CATE4CAFE.com -Trustee 'S-1-1-0' -Verbose`
 
-![](/Users/cate4cafe/工作/文章/ACL维持域权限/2.jpg)
+![](./media/2.jpg)
 
 普通域用户上就可以读取到域控上的本地管理员权限的hash
 
 `Get-RemoteLocalAccountHash -ComputerName ad -Verbose`
 
-![](/Users/cate4cafe/工作/文章/ACL维持域权限/3.jpg)
+![](./media/3.jpg)
 
 此账户hash不允许pth,还需要在域控上修改注册表允许其远程访问
 
@@ -46,7 +46,7 @@ system权限执行
 
 在域机器上便可修改模板文件
 
-![](/Users/cate4cafe/工作/文章/ACL维持域权限/4.jpg)
+![](./media/4.jpg)
 
 修改注册表添加自启动、映像劫持、修改主机账号的委派设置权限SeEnableDelegationPrivilege使得某个用户拥有修改域内所有用户的委派设置从而作为门等。
 
@@ -66,7 +66,7 @@ DS-Replication-Get-Changes(GUID:89e95b76-444d-4c62-991a-0facbeda640c)
 
 rcoil用户mimikatz执行dcsync
 
-![](/Users/cate4cafe/工作/文章/ACL维持域权限/5.jpg)
+![](./media/5.jpg)
 
 ### AdminSDHolder
 

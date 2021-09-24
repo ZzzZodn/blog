@@ -6,11 +6,11 @@
 
 导入项目
 
-![](A:\文章\Invoke-Obfuscation\media\2019-11-25-1.png)
+![](./media/2019-11-25-1.png)
 
 支持的加密功能列表
 
-![](A:\文章\Invoke-Obfuscation\media\2019-11-25-2.png)
+![](.\media\2019-11-25-2.png)
 
 TOKEN支持分部分混淆，STRING整条命令混淆，COMPRESS将命令转为单行并压缩，ENCODING编码，LAUNCHER选择执行方式。
 
@@ -36,40 +36,40 @@ TOKEN支持分部分混淆，STRING整条命令混淆，COMPRESS将命令转为�
 
   对字符进行混淆
 
-  ![](A:\文章\Invoke-Obfuscation\media\2019-11-27-1.png)
+  ![](.\media\2019-11-27-1.png)
 
   对命令混淆
 
-  ![](A:\文章\Invoke-Obfuscation\media\2019-11-27-2.png)
+  ![](.\media\2019-11-27-2.png)
 
   对参数混淆
 
-  ![](A:\文章\Invoke-Obfuscation\media\2019-11-27-3.png)
+  ![](.\media\2019-11-27-3.png)
 
   
 
 ​    使用ALL 混淆
 
-![](A:\文章\Invoke-Obfuscation\media\2019-11-27-4.png)
+![](.\media\2019-11-27-4.png)
 
 - **STRING**
 
-  ![](A:\文章\Invoke-Obfuscation\media\2019-11-27-5.png)
+  ![](.\media\2019-11-27-5.png)
 
 - **Encoding**
 
   支持base64、hex等编码
 
-  ![](A:\文章\Invoke-Obfuscation\media\2019-11-28-6.png)
+  ![](.\media\2019-11-28-6.png)
 
-![](A:\文章\Invoke-Obfuscation\media\2019-11-28-7.png)
+![](.\media\2019-11-28-7.png)
 
 - **COMPRESS**
 
-  ![](A:\文章\Invoke-Obfuscation\media\2019-11-28-8.png)
+  ![](.\media\2019-11-28-8.png)
 
 - **LAUNCHER**
 
-  ![](A:\文章\Invoke-Obfuscation\media\2019-11-28-9.png)
+  ![](.\media\2019-11-28-9.png)
 
-![](A:\文章\Invoke-Obfuscation\media\2019-11-28-10.png)
+![](.\media\2019-11-28-10.png)

