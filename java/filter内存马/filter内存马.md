@@ -1,0 +1,22 @@
+1、获取当前应用的ServletContext对象
+
+2、再获取filterConfigs
+
+2、接着实现自定义想要注入的filter对象
+
+4、然后为自定义对象的filter创建一个FilterDef
+
+4、最后把 ServletContext对象 filter对象 FilterDef全部都设置到filterConfigs即可完成内存马的实现
+
+
+
+
+
+注册流程总结
+context启动时，调用ServletContainerInitializers添加filter，调用AbstractFilterRegistrationBean类的addRegistration方法向context添加filter
+context中不存在FilterDef则创建对应FilterDef
+AbstractFilterRegistrationBean中configure方法添加匹配filter的uri，默认为/*
+context启动时，调用filterStart方法配置初始化ApplicationFilterConfig
+调用filter的init方法
+对每次到达的请求在StandardWrapperVavel的invoke方法中创建过滤器链
+根据名称获得ApplicationFilterConfig添加到过滤器链，通过ApplicationFilterConfig来获取filter执行
