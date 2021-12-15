@@ -55,7 +55,7 @@ Bypass UAC的方法大概可以分为：
 
 以eventvwr.exe为例分析白名单绕过UAC机制。
 
-查看eventvwr.exe属性，autoElevet属性为true，以为着可以自动提升权限。执行时会以管理员权限启动。
+查看eventvwr.exe属性，autoElevet属性为true，意味着可以自动提升权限。执行时会以管理员权限启动。
 
 ![](./media/autoElevte.jpg)
 
