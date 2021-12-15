@@ -69,7 +69,7 @@ Bypass UAC的方法大概可以分为：
 
 ### 3.2 DLL劫持
 
-DLL劫持绕过UAC的原理是劫持高权限白名单程序启动是要加载的DLL，达到高权限代码执行的目的。
+DLL劫持绕过UAC的原理是劫持高权限白名单程序启动时要加载的DLL，达到以高权限执行代码的目的。
 
 以C:\Windows\SysWOW64\SystemPropertiesAdvanced.exe为例，procemon查看启动时加载的DLL
 
