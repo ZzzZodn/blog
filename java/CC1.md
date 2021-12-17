@@ -215,7 +215,7 @@ sun.reflect.annotation.AnnotationInvocationHandler#invoke方法调用get部分
             }
 ```
 
-下面就是系列化对象了
+下面就是序列化对象了
 
 ```java
         ByteArrayOutputStream barr = new ByteArrayOutputStream();
